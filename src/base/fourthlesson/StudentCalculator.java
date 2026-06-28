@@ -6,7 +6,6 @@ public class StudentCalculator {
 
     public static double calculateCircleArea(double radius) {
         double circleArea = PI * radius * radius;
-        boolean isResult = true; // Переменная нигде не используется. По-хорошему, её тогда нужно удалить.
         return circleArea;
     }
 
