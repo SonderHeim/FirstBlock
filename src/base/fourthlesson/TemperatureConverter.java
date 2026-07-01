@@ -5,11 +5,11 @@ public class TemperatureConverter {
     public static final double ABSOLUTE_ZERO_CELSIUS = -273.15; // Вообще её можно было бы не объявлять, она не используется.
     public static final double BOILING_POINT_CELSIUS = 100.0;
 
-    public double celsiusToFahrenheit(double celsius) {
+    public static double celsiusToFahrenheit(double celsius) {
         return (celsius * 9) / 5 + 32;
     }
 
-    public double fahrenheitToCelsius(double fahrenheit) {
+    public static double fahrenheitToCelsius(double fahrenheit) {
         return (fahrenheit - 32) * 5 / 9;
     }
 
@@ -31,7 +31,11 @@ public class TemperatureConverter {
 
         System.out.println(fahrenheit);
 
-        isAboveBoiling = fahrenheit >= BOILING_POINT_CELSIUS;
+        celsius = fahrenheitToCelsius(fahrenheit);
+
+        System.out.println(celsius);
+
+        isAboveBoiling = celsius >= BOILING_POINT_CELSIUS;
 
         if (isAboveBoiling) {
             System.out.println("Вода закипела!");
